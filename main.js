@@ -35,14 +35,25 @@ function getInputValue(inputId){
 
 document.getElementById('calculate').addEventListener('click', function (){
     const perPlayerBudget = getInputValue('per-player-budget');
+    if(isNaN(perPlayerBudget)){
+        alert('input any positive value')
+    }
     const playersBudget = perPlayerBudget*(players.length)
     document.getElementById('expenses').innerText = playersBudget;
+    
+    
 })
 
 //total calculate button functionality
 document.getElementById('total-btn').addEventListener('click', function(){
    const mangerCoast = getInputValue('manager-cost');
+   if(isNaN(mangerCoast)){
+    alert('input any positive value')
+}
    const coachCoast = getInputValue('coach-coast');
+   if(isNaN(coachCoast)){
+    alert('input any positive value')
+}
    const playerExpString = document.getElementById('expenses').innerText;
    const playerExpense = parseFloat(playerExpString);
    const totalCoast =playerExpense + mangerCoast + coachCoast;
