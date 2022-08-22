@@ -32,6 +32,8 @@ document.getElementById('players').addEventListener('click', function(event){
     
 })
 
+
+//function to get the input value
 function getInputValue(inputId){
     if((parseFloat(document.getElementById(inputId).value))!=='number'){
         console.log('Enter any positive amount')
@@ -39,6 +41,11 @@ function getInputValue(inputId){
     return (parseFloat(document.getElementById(inputId).value))
 }
 
-const outPut = getInputValue('coach-coast')
-console.log(outPut);
+//calculate button functionality
+
+document.getElementById('calculate').addEventListener('click', function (){
+    const perPlayerBudget = getInputValue('per-player-budget');
+    const playersBudget = perPlayerBudget*(players.length)
+    document.getElementById('expenses').innerText = playersBudget;
+})
 
