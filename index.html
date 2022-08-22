@@ -7,10 +7,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Fantasy BPL</title>
 </head>
-<body>
+<body class="bg-slate-200">
     <header class="bg-slate-400 p-5"> 
         <h2 class="text-3xl ml-12 font-bold">Fantasy BPL</h2>
     </header>
+    <main class="flex">
+        <div id="players" class="flex-initial w-64">
+            <div class="text-center">
+                <img src="images/Lionel-Messi-2018.webp" alt="">
+                <h2>Lionel Messi</h2>
+                <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400">Select</button>
+            </div>
+        </div>
+        <div id="right-side" class="flex-initial w-32">
+            <div id="selected players">
+                <h2>Selected players</h2>
+                <div id="player-list"></div>
+            </div>
+            <div id="budget">
+                <h2>Budget</h2>
+                <span>Per player</span><input type="text" class="ml-4"><br>
+                <button class="bg-slate-400 px-3 py-1 mt-4">Calculate</button><br>
+                <span class="mt-4">Player Expense</span><span id="expenses" class="ml-4 mt-4">00</span><br>
+                <span class="mt-4">Manager</span><input type="text" class="ml-4 mt-4"><br>
+                <span class="mt-4 mb-4">Coach</span><input type="text" class="ml-4 mt-4 mb-4"><br>
+                <span class="mt-6">Total</span><span id="total" class="ml-4 mt-6">00</span><br>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
