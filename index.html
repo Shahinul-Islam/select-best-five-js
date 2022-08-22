@@ -11,15 +11,38 @@
     <header class="bg-slate-400 p-5"> 
         <h2 class="text-3xl ml-12 font-bold">Fantasy BPL</h2>
     </header>
-    <main class="flex">
-        <div id="players" class="flex-initial w-64">
-            <div class="text-center">
-                <img src="images/Lionel-Messi-2018.webp" alt="">
-                <h2>Lionel Messi</h2>
-                <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400">Select</button>
-            </div>
+    <main class="flex mt-4 p-2">
+        <div  class="w-4/5">
+            <section id="players" class="grid grid-cols-3 gap-4">
+                <div class="single-player text-center">
+                    <img class="h-60" src="images/messi.jpg" alt="">
+                    <h2 class="mr-24">Lionel Messi</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div>
+                <div class="single-player text-center">
+                    <img class="h-60" src="images/machado.jpg" alt="">
+                    <h2 class="mr-24">Vítor Machado</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div><div class="single-player text-center">
+                    <img class="h-60" src="images/mbappe.jpg" alt="">
+                    <h2 class="mr-24">Kylian Mbappé</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div><div class="single-player text-center">
+                    <img class="h-60" src="images/neymar.jpg" alt="">
+                    <h2 class="mr-24">Neymar Jr</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div><div class="single-player text-center">
+                    <img class="h-60" src="images/ramos.jpg" alt="">
+                    <h2 class="mr-24">Sergio Ramos</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div><div class="single-player text-center">
+                    <img class="h-60 w-96" src="images/Sanches.jpg" alt="">
+                    <h2 class="mr-24">Renato Sanches</h2>
+                    <button id="select-btn" class="select-player px-3 py-1 rounded font-bold mt-4 bg-slate-400 mr-24">Select</button>
+                </div>
+            </section>
         </div>
-        <div id="right-side" class="flex-initial w-32">
+        <div id="right-side" class="ml-4">
             <div id="selected players">
                 <h2>Selected players</h2>
                 <div id="player-list"></div>
@@ -35,6 +58,8 @@
             </div>
         </div>
     </main>
+
+    <script src="/main.js"></script>
     
 </body>
 </html>
