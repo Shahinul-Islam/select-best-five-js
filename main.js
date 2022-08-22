@@ -10,6 +10,7 @@ document.getElementById('players').addEventListener('click', function(event){
             ol.classList.add('list-disc')
             const li = document.createElement('li')
             li.innerText= nameValue
+            ol.classList.add('p-2')
             ol.appendChild(li)
             document.getElementById('selected-players').appendChild(ol)
             event.target.disabled=true
@@ -30,3 +31,14 @@ document.getElementById('players').addEventListener('click', function(event){
     
     
 })
+
+function getInputValue(inputId){
+    if((parseFloat(document.getElementById(inputId).value))!=='number'){
+        console.log('Enter any positive amount')
+    }
+    return (parseFloat(document.getElementById(inputId).value))
+}
+
+const outPut = getInputValue('coach-coast')
+console.log(outPut);
+

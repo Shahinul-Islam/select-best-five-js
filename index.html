@@ -11,9 +11,9 @@
     <header class="bg-slate-400 p-5"> 
         <h2 class="text-3xl ml-12 font-bold">Fantasy BPL</h2>
     </header>
-    <main class="flex mt-4 p-2">
-        <div  class="w-4/5">
-            <section id="players" class="grid grid-cols-3 gap-4">
+    <main class="md:flex mt-4 p-2">
+        <div  class="w-4/5 my-4">
+            <section id="players" class="grid md:grid-cols-3 gap-4">
                 <div class="single-player text-center">
                     <img class="h-60" src="images/messi.jpg" alt="">
                     <h2 class="mr-24">Lionel Messi</h2>
@@ -42,18 +42,19 @@
                 </div>
             </section>
         </div>
-        <div id="right-side" class="ml-4">
-            <div id="selected-players">
+        <div id="right-side" class="ml-4 my-4">
+            <div id="selected-players" class="bg-slate-100 p-4 mb-4">
                 <h2>Selected players</h2>
                 <div id="player-list"></div>
             </div>
-            <div id="budget">
+            <div id="budget" class="bg-slate-100 p-2">
                 <h2>Budget</h2>
-                <span>Per player</span><input type="text" class="ml-4"><br>
-                <button class="bg-slate-400 px-3 py-1 mt-4">Calculate</button><br>
+                <span>Per player</span><input type="text" id="per-player-budget" class=""><br>
+                <button class="bg-slate-400 px-3 py-1 mt-4 mb-4">Calculate</button><br>
                 <span class="mt-4">Player Expense</span><span id="expenses" class="ml-4 mt-4">00</span><br>
-                <span class="mt-4">Manager</span><input type="text" class="ml-4 mt-4"><br>
-                <span class="mt-4 mb-4">Coach</span><input type="text" class="ml-4 mt-4 mb-4"><br>
+                <span class="mt-4">Manager</span><input id="manager-cost" type="text" class="ml-1 mt-4"><br>
+                <span class="mt-4 mb-4">Coach</span><input id="coach-coast" type="text" class="ml-4 mt-4 mb-4"><br>
+                <button class="bg-slate-400 px-3 py-1 mt-2 mb-4">Calculate Total</button><br>
                 <span class="mt-6">Total</span><span id="total" class="ml-4 mt-6">00</span><br>
             </div>
         </div>
