@@ -1,7 +1,5 @@
 const players=[]
 document.getElementById('players').addEventListener('click', function(event){
-    
-
         if(event.target.classList[0]=='select-player'){
             const nameValue = (event.target.parentNode.children[1].innerText);
             if(players.length<5){
@@ -24,20 +22,13 @@ document.getElementById('players').addEventListener('click', function(event){
         else{
             event.target.disabled=false;
             event.target.classList.add('bg-slate-300')
-    
         }
-
-    
-    
 })
 
 
 //function to get the input value
 function getInputValue(inputId){
-    if((parseFloat(document.getElementById(inputId).value))!=='number'){
-        console.log('Enter any positive amount')
-    }
-    return (parseFloat(document.getElementById(inputId).value))
+        return (parseFloat(document.getElementById(inputId).value))
 }
 
 //calculate button functionality
