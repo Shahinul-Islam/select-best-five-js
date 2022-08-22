@@ -18,7 +18,6 @@ document.getElementById('players').addEventListener('click', function(event){
             }
             else if(players.length==5){
                 alert('five players added')
-                console.log(players)
             }
         }
         
@@ -47,5 +46,15 @@ document.getElementById('calculate').addEventListener('click', function (){
     const perPlayerBudget = getInputValue('per-player-budget');
     const playersBudget = perPlayerBudget*(players.length)
     document.getElementById('expenses').innerText = playersBudget;
+})
+
+//total calculate button functionality
+document.getElementById('total-btn').addEventListener('click', function(){
+   const mangerCoast = getInputValue('manager-cost');
+   const coachCoast = getInputValue('coach-coast');
+   const playerExpString = document.getElementById('expenses').innerText;
+   const playerExpense = parseFloat(playerExpString);
+   const totalCoast =playerExpense + mangerCoast + coachCoast;
+   document.getElementById('total').innerText = totalCoast;
 })
 
